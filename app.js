@@ -41,5 +41,5 @@ $('preferred').value=state.prefs.preferred;$('maxDistance').value=state.prefs.ma
 $('saveSettings').onclick=()=>{state.prefs={preferred:$('preferred').value,maxDistance:Math.max(1,Number($('maxDistance').value)||20)};localStorage.setItem('hh-prefs',JSON.stringify(state.prefs));renderAll();alert('Preferences saved')};
 $('export').onclick=()=>{let a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(state.journal,null,2)],{type:'application/json'}));a.href=url;a.download='hokkien-hunt-passport.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};
 $('reset').onclick=()=>{if(confirm('Clear your saved stalls and visits?')){state.journal={};save()}};
-if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 renderAll();
