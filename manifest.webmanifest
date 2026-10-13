@@ -2,14 +2,14 @@
   "name": "Hokkien Hunt",
   "short_name": "Hokkien Hunt",
   "description": "Discover Singapore fried Hokkien prawn mee",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f8f7f1",
   "theme_color": "#17392b",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
